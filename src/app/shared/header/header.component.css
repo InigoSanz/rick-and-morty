@@ -44,3 +44,8 @@ header {
   cursor: pointer;
   font-size: 30.5px;
 }
+
+.anchor {
+  color: black;
+  text-decoration: none;
+}

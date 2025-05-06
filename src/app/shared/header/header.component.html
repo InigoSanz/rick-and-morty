@@ -1,18 +1,18 @@
 <header>
-  <div class="logo-div">
+  <div class="logo-div" [routerLink]="['/']">
     <img src="rick-and-morty-pic.png" />
   </div>
 
   <nav>
     <ul class="nav-opt">
       <li>
-        <a (click)="navigateTo('characters')">Characters</a>
+        <a class="anchor" [routerLink]="['characters']">Characters</a>
       </li>
       <li>
-        <a (click)="navigateTo('episodes')">Episodes</a>
+        <a class="anchor" [routerLink]="['episodes']">Episodes</a>
       </li>
       <li>
-        <a (click)="navigateTo('locations')">Locations</a>
+        <a class="anchor" [routerLink]="['locations']">Locations</a>
       </li>
     </ul>
   </nav>
