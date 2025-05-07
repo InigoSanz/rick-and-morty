@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 
 @Component({
+  standalone: true,
   selector: 'app-card',
   imports: [CommonModule],
   templateUrl: './card.component.html',

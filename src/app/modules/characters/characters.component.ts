@@ -24,5 +24,7 @@ export class CharactersComponent implements OnInit {
 
   constructor(private _filterService: FilterService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log(this._filterService.searchText);
+  }
 }
