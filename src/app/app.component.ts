@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './shared/header/header.component';
 import { SearchBarComponent } from './shared/search-bar/search-bar.component';
+import { FilterService } from './core/services/filter/filter.service';
 
 @Component({
   selector: 'app-root',
@@ -11,4 +12,10 @@ import { SearchBarComponent } from './shared/search-bar/search-bar.component';
 })
 export class AppComponent {
   title = 'rick-and-morty';
+
+  constructor(private _filterService: FilterService) {}
+
+  protected onSearchText(searchText: string) {
+    console.log(searchText);
+  }
 }

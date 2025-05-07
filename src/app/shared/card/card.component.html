@@ -1,5 +1,6 @@
 <div class="card-cont">
   <h4>{{ data?.name || data?.title }}</h4>
+  <!--? es por que hemos puesto any-->
   <p *ngIf="data?.age">Age: {{ data.age }}</p>
   <p *ngIf="data?.year">Year: {{ data.year }}</p>
   <p *ngIf="data?.distance">Distance: {{ data.distance }}</p>

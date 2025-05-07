@@ -1,4 +1,8 @@
 <div class="search-cont">
-  <input type="text" />
-  <button class="search-button">🔍</button>
+  <input
+    [(ngModel)]="searchValue"
+    [ngModelOptions]="{ standalone: true }"
+    class="text"
+  />
+  <button class="search-button" (click)="onSearch()">🔍</button>
 </div>
