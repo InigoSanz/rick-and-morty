@@ -1,3 +1,8 @@
 <div class="card-wrapper">
-  <app-card *ngFor="let char of characters" [data]="char"></app-card>
+  <div class="card-cont" *ngFor="let char of filteredCharacters">
+    <h4>{{ char.name }}</h4>
+    <p><strong>Status:</strong> {{ char.status }}</p>
+    <p><strong>Species:</strong> {{ char.species }}</p>
+    <p><strong>Gender:</strong> {{ char.gender }}</p>
+  </div>
 </div>

@@ -1,3 +1,7 @@
 <div class="card-wrapper">
-  <app-card *ngFor="let ep of episodes" [data]="ep"></app-card>
+  <div class="card-cont" *ngFor="let ep of filteredEpisodes">
+    <h4>{{ ep.name }}</h4>
+    <p><strong>Episode:</strong> {{ ep.episode }}</p>
+    <p><strong>Air Date:</strong> {{ ep.air_date }}</p>
+  </div>
 </div>

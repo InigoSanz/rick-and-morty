@@ -1,5 +1,6 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { FilterService } from '../../core/services/filter/filter.service';
 
 @Component({
   standalone: true,
@@ -9,16 +10,11 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './search-bar.component.css',
 })
 export class SearchBarComponent {
-  @Output() searchText: EventEmitter<string>;
+  protected searchValue: string = '';
 
-  protected searchValue: string;
+  constructor(private _filterService: FilterService) {}
 
-  constructor() {
-    this.searchValue = '';
-    this.searchText = new EventEmitter<string>();
-  }
-
-  protected onSearch() {
-    this.searchText.emit(this.searchValue);
+  protected onSearch(): void {
+    this._filterService.updateSearchText(this.searchValue);
   }
 }

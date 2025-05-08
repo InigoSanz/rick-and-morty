@@ -1,3 +1,8 @@
 <div class="card-wrapper">
-  <app-card *ngFor="let loc of locations" [data]="loc"></app-card>
+  <div class="card-cont" *ngFor="let loc of filteredLocations">
+    <h4>{{ loc.name }}</h4>
+    <p><strong>Type:</strong> {{ loc.type }}</p>
+    <p><strong>Dimension:</strong> {{ loc.dimension }}</p>
+    <p><strong>Residents:</strong> {{ loc.residents.join(", ") }}</p>
+  </div>
 </div>
